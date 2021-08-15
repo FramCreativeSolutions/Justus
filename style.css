@@ -554,6 +554,10 @@ border-bottom: 4px solid white;
      font-size: 1rem;
 }
 
+.line-believe {
+display: none;
+}
+
 .location-section {
     width: 100vw;
     height: fit-content;
@@ -978,13 +982,16 @@ font-weight: normal;
         display: none;
     }
 
+    .values-section > img {
+        width: 100%;
+        height: auto;
+    }
+
     .believe-section {
         width: 100vw;
         height: fit-content;
 flex-direction: column;
-padding-top: 5vh;
 margin-top: 5vh;
-border-top: 1px solid black;
     }
     
     .believe-pic {
@@ -1003,5 +1010,14 @@ border-top: 1px solid black;
     .believe-title {
        text-align: center;
         font-size: 2rem;
+    }
+
+    .line-believe {
+        display: block;
+        border: none;
+        height: 2px;
+        width: 70vw;
+        background: black;
+        margin-bottom: 5vh;
     }
   }
