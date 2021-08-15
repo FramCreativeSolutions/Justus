@@ -714,8 +714,22 @@ border-bottom: 4px solid white;
     display: none;
 }
 
-.nav-responsive {
-    padding: 0 0 20vh 0;
+
+
+
+@media only screen and (max-width: 1200px) {
+    .nav-items-responsive {
+        display: flex;
+        align-self: center;
+        margin-right: 5vw;
+    }
+
+    .selected-nav-item {
+border: none;
+    }
+
+    .nav-items {
+        padding: 0 0 20vh 0;
     box-sizing: border-box;
     width: 100vw;
     height: 90vh;
@@ -728,19 +742,6 @@ border-bottom: 4px solid white;
     display: none;
     justify-content: space-around;
     flex-direction: column;
-}
-
-
-
-@media only screen and (max-width: 1200px) {
-    .nav-items-responsive {
-        display: flex;
-        align-self: center;
-        margin-right: 5vw;
-    }
-
-    .nav-items {
-        display: none;
     }
 
     .nav-logo {

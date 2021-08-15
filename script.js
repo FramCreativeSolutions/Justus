@@ -18,14 +18,26 @@
 setTimeout(() => {
     let overlay = document.getElementsByClassName('overlay')[0]
     overlay.style.opacity = '0'
-
+    
 },1500)
 
 setTimeout(() => {
     let overlay = document.getElementsByClassName('overlay')[0]
     overlay.style.display = 'none'
-
+    
 },2500)
+
+let burgerOpen = false
+let burger = document.getElementsByClassName('burger')[0];
+burger.addEventListener('click', () => {
+burgerOpen = !burgerOpen
+
+if (burgerOpen === false){
+    document.getElementsByClassName('nav-items')[0].style.display = 'none'
+} else {
+    document.getElementsByClassName('nav-items')[0].style.display = 'flex'
+} 
+})
 
 let home_button = document.getElementsByClassName('HOME')[0]
 let history_button = document.getElementsByClassName('OUR-HISTORY')[0]
@@ -56,6 +68,9 @@ home_button.addEventListener('click',() => {
     if (!home_button.classList.toString().includes('selected-nav-item')) {
         home_button.classList.add('selected-nav-item')
         }
+        if (burgerOpen === true){
+            document.getElementsByClassName('nav-items')[0].style.display = 'none'
+        }
 // document.getElementsByClassName("container-menu-items2")[0].style.display = 'none'
 home_section.scrollIntoView({ 
   behavior: 'smooth' 
@@ -73,6 +88,9 @@ history_button.addEventListener('click',() => {
     if (!history_button.classList.toString().includes('selected-nav-item')) {
         history_button.classList.add('selected-nav-item')
         }
+        if (burgerOpen === true){
+            document.getElementsByClassName('nav-items')[0].style.display = 'none'
+        }
 // document.getElementsByClassName("container-menu-items2")[0].style.display = 'none'
 history_section.scrollIntoView({ 
   behavior: 'smooth' 
@@ -88,6 +106,9 @@ team_button.addEventListener('click',() => {
     })
     if (!team_button.classList.toString().includes('selected-nav-item')) {
         team_button.classList.add('selected-nav-item')
+        }
+        if (burgerOpen === true){
+            document.getElementsByClassName('nav-items')[0].style.display = 'none'
         }
 // document.getElementsByClassName("container-menu-items2")[0].style.display = 'none'
 team_section.scrollIntoView({ 
@@ -105,6 +126,9 @@ values_button.addEventListener('click',() => {
     if (!values_button.classList.toString().includes('selected-nav-item')) {
         values_button.classList.add('selected-nav-item')
         }
+        if (burgerOpen === true){
+            document.getElementsByClassName('nav-items')[0].style.display = 'none'
+        }
 // document.getElementsByClassName("container-menu-items2")[0].style.display = 'none'
 values_section.scrollIntoView({ 
   behavior: 'smooth' 
@@ -121,6 +145,9 @@ services_button.addEventListener('click',() => {
     if (!services_button.classList.toString().includes('selected-nav-item')) {
         services_button.classList.add('selected-nav-item')
         }
+        if (burgerOpen === true){
+            document.getElementsByClassName('nav-items')[0].style.display = 'none'
+        }
     // document.getElementsByClassName("container-menu-items2")[0].style.display = 'none'
     services_section.scrollIntoView({ 
         behavior: 'smooth' 
@@ -136,6 +163,9 @@ location_button.addEventListener('click',() => {
     })
     if (!location_button.classList.toString().includes('selected-nav-item')) {
         location_button.classList.add('selected-nav-item')
+        }
+        if (burgerOpen === true){
+            document.getElementsByClassName('nav-items')[0].style.display = 'none'
         }
     // document.getElementsByClassName("container-menu-items2")[0].style.display = 'none'
     location_section.scrollIntoView({ 
@@ -155,6 +185,7 @@ home_button2.addEventListener('click',() => {
     if (!home_button2.classList.toString().includes('selected-footer-nav-item')) {
         home_button2.classList.add('selected-footer-nav-item')
         }
+        
 // document.getElementsByClassName("container-menu-items2")[0].style.display = 'none'
 home_section.scrollIntoView({ 
   behavior: 'smooth' 
@@ -391,14 +422,3 @@ let linked = document.getElementsByClassName('linked')[0].addEventListener('clic
     window.location = `https://www.linkedin.com/`
 })
 
-let burgerOpen = false
-let burger = document.getElementsByClassName('burger')[0];
-burger.addEventListener('click', () => {
-burgerOpen = !burgerOpen
-
-if (burgerOpen === false){
-    document.getElementsByClassName('nav-responsive')[0].style.display = 'none'
-} else {
-    document.getElementsByClassName('nav-responsive')[0].style.display = 'flex'
-} 
-})
