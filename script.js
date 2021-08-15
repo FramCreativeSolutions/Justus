@@ -34,8 +34,10 @@ burgerOpen = !burgerOpen
 
 if (burgerOpen === false){
     document.getElementsByClassName('nav-items')[0].style.display = 'none'
+    burger.style.background = 'url(./cross.svg) no-repeat'
 } else {
     document.getElementsByClassName('nav-items')[0].style.display = 'flex'
+    burger.style.background = 'url(./burger.svg) no-repeat'
 } 
 })
 
