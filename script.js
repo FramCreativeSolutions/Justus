@@ -41,6 +41,7 @@ if (burgerOpen === false){
 } 
 })
 
+
 let home_button = document.getElementsByClassName('HOME')[0]
 let history_button = document.getElementsByClassName('OUR-HISTORY')[0]
 let team_button = document.getElementsByClassName('TEAM')[0]
@@ -313,6 +314,8 @@ const en_services = {
 }
 
 let service_container = document.getElementsByClassName('services-text-text')[0]
+let service_pic = document.getElementsByClassName('services-pic')[0]
+
 let service_container_title = document.getElementsByClassName('services-text-title')[0]
 
 let property_button = document.getElementsByClassName('property')[0]
@@ -336,6 +339,10 @@ property_button.addEventListener('click',() => {
         }
    service_container.innerHTML = en_services.property
    service_container_title.innerHTML = `(PROPERTY) REAL ESTATE LAW`
+
+   service_pic.scrollIntoView({ 
+    behavior: 'smooth' 
+});
 })
 
 commercial_button.addEventListener('click',() => {
@@ -349,6 +356,10 @@ commercial_button.addEventListener('click',() => {
         }
    service_container.innerHTML = en_services.commercial
    service_container_title.innerHTML = `COMMERCIAL AND CORPORATIVE LAW`
+
+   service_pic.scrollIntoView({ 
+    behavior: 'smooth' 
+});
 })
 
 civil_button.addEventListener('click',() => {
@@ -362,6 +373,10 @@ civil_button.addEventListener('click',() => {
         }
    service_container.innerHTML = en_services.civil
    service_container_title.innerHTML = `CIVIL AND COMMERCIAL LITIGATION`
+
+   service_pic.scrollIntoView({ 
+    behavior: 'smooth' 
+});
 })
 
 tax_button.addEventListener('click',() => {
@@ -375,6 +390,10 @@ tax_button.addEventListener('click',() => {
         }
    service_container.innerHTML = en_services.tax
    service_container_title.innerHTML = `TAX LAW`
+
+   service_pic.scrollIntoView({ 
+    behavior: 'smooth' 
+});
 })
 
 financial_button.addEventListener('click',() => {
@@ -388,6 +407,10 @@ financial_button.addEventListener('click',() => {
         }
    service_container.innerHTML = en_services.financial
    service_container_title.innerHTML = `FINANCIAL ADVICES`
+
+   service_pic.scrollIntoView({ 
+    behavior: 'smooth' 
+});
 })
 
 intellectual_button.addEventListener('click',() => {
@@ -401,6 +424,10 @@ intellectual_button.addEventListener('click',() => {
         }
    service_container.innerHTML = en_services.intellectual
    service_container_title.innerHTML = `INTELLECTUAL PROPERTY`
+
+   service_pic.scrollIntoView({ 
+    behavior: 'smooth' 
+});
 })
 
 penal_button.addEventListener('click',() => {
@@ -414,6 +441,10 @@ penal_button.addEventListener('click',() => {
         }
    service_container.innerHTML = en_services.penal
    service_container_title.innerHTML = `PENAL LAW`
+
+   service_pic.scrollIntoView({ 
+    behavior: 'smooth' 
+});
 })
 
 let fb = document.getElementsByClassName('facebook')[0].addEventListener('click', () => {
