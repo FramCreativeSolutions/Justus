@@ -765,6 +765,7 @@ font-weight: normal;
 
     .nav-logo {
         width: 35vw;
+        margin-left: 6vw;
     }
 
     .home-section {
@@ -1043,13 +1044,8 @@ margin-top: 5vh;
        width: 100%;
        height: fit-content;
        justify-content: center;
-    }
-    
-    .map-desktop {
-        display: none;
-    }
-    .map-mobile {
-display: block;
+       padding: 2rem 0 6rem 0;
+       box-sizing: border-box;
     }
 
     .location-history-black-outline {
