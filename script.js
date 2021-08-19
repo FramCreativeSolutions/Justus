@@ -30,14 +30,16 @@ setTimeout(() => {
 let burgerOpen = false
 let burger = document.getElementsByClassName('burger')[0];
 burger.addEventListener('click', () => {
-burgerOpen = !burgerOpen
-
+    burger.style.transform = 'translateY(20%)'
+    
 if (burgerOpen === false){
-    document.getElementsByClassName('nav-items')[0].style.display = 'none'
-    burger.style.background = 'url(./cross.svg) no-repeat'
-} else {
     document.getElementsByClassName('nav-items')[0].style.display = 'flex'
+    burger.style.background = 'url(./cross.svg) no-repeat'
+    burgerOpen = !burgerOpen
+} else {
+    document.getElementsByClassName('nav-items')[0].style.display = 'none'
     burger.style.background = 'url(./burger.svg) no-repeat'
+    burgerOpen = !burgerOpen
 } 
 })
 
@@ -73,6 +75,8 @@ home_button.addEventListener('click',() => {
         }
         if (burgerOpen === true){
             document.getElementsByClassName('nav-items')[0].style.display = 'none'
+    burger.style.background = 'url(./burger.svg) no-repeat'
+
         }
 // document.getElementsByClassName("container-menu-items2")[0].style.display = 'none'
 home_section.scrollIntoView({ 
@@ -93,6 +97,8 @@ history_button.addEventListener('click',() => {
         }
         if (burgerOpen === true){
             document.getElementsByClassName('nav-items')[0].style.display = 'none'
+    burger.style.background = 'url(./burger.svg) no-repeat'
+
         }
 // document.getElementsByClassName("container-menu-items2")[0].style.display = 'none'
 history_section.scrollIntoView({ 
@@ -112,6 +118,8 @@ team_button.addEventListener('click',() => {
         }
         if (burgerOpen === true){
             document.getElementsByClassName('nav-items')[0].style.display = 'none'
+    burger.style.background = 'url(./burger.svg) no-repeat'
+
         }
 // document.getElementsByClassName("container-menu-items2")[0].style.display = 'none'
 team_section.scrollIntoView({ 
@@ -131,6 +139,8 @@ values_button.addEventListener('click',() => {
         }
         if (burgerOpen === true){
             document.getElementsByClassName('nav-items')[0].style.display = 'none'
+    burger.style.background = 'url(./burger.svg) no-repeat'
+
         }
 // document.getElementsByClassName("container-menu-items2")[0].style.display = 'none'
 values_section.scrollIntoView({ 
@@ -150,6 +160,8 @@ services_button.addEventListener('click',() => {
         }
         if (burgerOpen === true){
             document.getElementsByClassName('nav-items')[0].style.display = 'none'
+    burger.style.background = 'url(./burger.svg) no-repeat'
+
         }
     // document.getElementsByClassName("container-menu-items2")[0].style.display = 'none'
     services_section.scrollIntoView({ 
@@ -169,6 +181,8 @@ location_button.addEventListener('click',() => {
         }
         if (burgerOpen === true){
             document.getElementsByClassName('nav-items')[0].style.display = 'none'
+    burger.style.background = 'url(./burger.svg) no-repeat'
+
         }
     // document.getElementsByClassName("container-menu-items2")[0].style.display = 'none'
     location_section.scrollIntoView({ 
