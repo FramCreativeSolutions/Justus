@@ -580,6 +580,10 @@ display: none;
    justify-content: flex-start;
 }
 
+.map-mobile {
+    display: none;
+        }
+
 .location-history-black-outline {
     background: url(./location-b.svg) no-repeat;
     background-position: right;
@@ -1019,5 +1023,101 @@ margin-top: 5vh;
         width: 70vw;
         background: black;
         margin-bottom: 5vh;
+    }
+
+    .location-section {
+        width: 100vw;
+        height: fit-content;
+       flex-direction: column;
+       padding: 1rem;
+       box-sizing: border-box;
+       
+    }
+    
+    .location-addresses {
+        width: 90%;
+        height: fit-content;
+    }
+    
+    .location-map{
+       width: 100%;
+       height: fit-content;
+       justify-content: center;
+    }
+    
+    .map-desktop {
+        display: none;
+    }
+    .map-mobile {
+display: block;
+    }
+
+    .location-history-black-outline {
+        width: 1.8rem;
+        height: 2.5rem;
+        margin: 0rem 0 0.5rem 0;
+    }
+    
+    .location-history-black-big {
+        width: 1.8rem;
+        height: 2.5rem;
+        margin: 0rem 0 0.5rem 0;
+    }
+
+    .footer {
+        background-color: black;
+        width: 100vw;
+        height: fit-content;
+        padding: 1rem 9vw 1rem 9vw;
+        box-sizing: border-box;
+    }
+    
+    .footer-logo {
+        background: url(./logo-white.svg) no-repeat;
+        background-position: right;
+        background-size: contain;
+        width: 9rem;
+        height: 6rem;
+    }
+    
+    .footer-first-section {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .footer-nav-items {
+        display: none;
+    }
+    
+    .footer-text {
+        width: 90%;
+        color: white;
+        font-family: var(--Muli);
+        font-weight: lighter;
+        font-size: 0.8rem;
+    }
+    
+    .footer-padding {
+        padding: 3vh 0vw 8vh 0vh;
+        margin-bottom: 1.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .socials {
+        padding-top: 2rem;
+        justify-content: flex-start;
+    }
+    
+    .facebook {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    
+    .linked {
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-left: 4vw;
     }
   }
