@@ -359,7 +359,7 @@ const en_services = {
 }
 
 let service_container = document.getElementsByClassName('services-text-text')[0]
-let service_pic = document.getElementsByClassName('services-pic')[0]
+let service_pic = document.getElementsByClassName('services-text')[0]
 
 let service_container_title = document.getElementsByClassName('services-text-title')[0]
 
@@ -499,4 +499,3 @@ let fb = document.getElementsByClassName('facebook')[0].addEventListener('click'
 let linked = document.getElementsByClassName('linked')[0].addEventListener('click', () => {
     window.location = `https://www.linkedin.com/`
 })
-

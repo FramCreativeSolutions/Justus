@@ -342,7 +342,7 @@ const bg_services = {
 }
 
 let service_container1 = document.getElementsByClassName('services-text-text')[1]
-let service_pic1 = document.getElementsByClassName('services-pic')[1]
+let service_pic1 = document.getElementsByClassName('services-text')[1]
 
 let service_container_title1 = document.getElementsByClassName('services-text-title')[1]
 
@@ -443,8 +443,8 @@ financial_button1.addEventListener('click',() => {
 
 intellectual_button1.addEventListener('click',() => {
     services_nav1.map(el => {
-        if (el.classList1.toString().includes('selected-service')) {
-        el.classList1.remove('selected-service')
+        if (el.classList.toString().includes('selected-service')) {
+        el.classList.remove('selected-service')
         }
     })
     if (!intellectual_button1.classList.toString().includes('selected-service')) {
