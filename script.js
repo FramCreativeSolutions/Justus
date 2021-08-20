@@ -499,3 +499,89 @@ let fb = document.getElementsByClassName('facebook')[0].addEventListener('click'
 let linked = document.getElementsByClassName('linked')[0].addEventListener('click', () => {
     window.location = `https://www.linkedin.com/`
 })
+
+
+
+
+
+const scrollElements = document.querySelectorAll(".js-scroll");
+
+const elementInView = (el, dividend = 1.25) => {
+  const elementTop = el.getBoundingClientRect().top;
+
+  return (
+    elementTop <=
+    (window.innerHeight || document.documentElement.clientHeight) / dividend
+  );
+};
+
+const elementOutofView = (el) => {
+  const elementTop = el.getBoundingClientRect().top;
+
+  return (
+    elementTop > (window.innerHeight || document.documentElement.clientHeight)
+  );
+};
+
+const displayScrollElement = (element) => {
+if (element.classList.toString().includes("our-title")) {
+  element.classList.add("move-left");
+}
+if (element.classList.toString().includes("history-title")) {
+    element.classList.add("move-right");
+  }
+  if (element.classList.toString().includes("person-pic")) {
+    element.classList.add("fade-in");
+  }
+  if (element.classList.toString().includes("our-values-title")) {
+    element.classList.add("move-right");
+  }
+  if (element.classList.toString().includes("values-title")) {
+    element.classList.add("move-left");
+  }
+  if (element.classList.toString().includes("believe-title")) {
+    element.classList.add("zoom");
+  }
+  if (element.classList.toString().includes("history-resp-title")) {
+    element.classList.add("zoom");
+  }
+};
+
+const hideScrollElement = (element) => {
+    if (element.classList.toString().includes("our-title")) {
+        element.classList.remove("move-left");
+      }
+      if (element.classList.toString().includes("history-title")) {
+        element.classList.remove("move-right");
+      }
+      if (element.classList.toString().includes("person-pic")) {
+        element.classList.remove("fade-in");
+      }
+      if (element.classList.toString().includes("our-values-title")) {
+        element.classList.remove("move-right");
+      }
+      if (element.classList.toString().includes("values-title")) {
+        element.classList.remove("move-left");
+      }
+      if (element.classList.toString().includes("believe-title")) {
+        element.classList.remove("zoom");
+      }
+      if (element.classList.toString().includes("history-resp-title")) {
+        element.classList.remove("zoom");
+      }
+      
+};
+
+const handleScrollAnimation = () => {
+  scrollElements.forEach((el) => {
+    if (elementInView(el, 1.25)) {
+      displayScrollElement(el);
+    } else if (elementOutofView(el)) {
+      hideScrollElement(el)
+    }
+  })
+}
+
+window.addEventListener("scroll", () => { 
+  handleScrollAnimation();
+});
