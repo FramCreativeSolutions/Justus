@@ -27,6 +27,38 @@ setTimeout(() => {
     
 },2500)
 
+let BG = document.getElementsByClassName('bg-button')[0];
+let EN = document.getElementsByClassName('en-button')[0];
+let language = 'en'
+
+BG.addEventListener('click', () => {
+    language = 'bg'
+    BG.style.fontWeight = '800'
+    BG.style.fontDecoration = 'underline'
+    document.getElementsByClassName('english')[0].style.display = 'none'
+    document.getElementsByClassName('bulgarian')[0].style.display = 'block'
+})
+EN.addEventListener('click', () => {
+    language = 'en'
+    EN.style.fontWeight = '800'
+    EN.style.fontDecoration = 'underline'
+    document.getElementsByClassName('english')[0].style.display = 'block'
+    document.getElementsByClassName('bulgarian')[0].style.display = 'none'
+})
+
+if (language === 'en') {
+    EN.style.fontWeight = '800'
+    EN.style.fontDecoration = 'underline'
+    document.getElementsByClassName('english')[0].style.display = 'block'
+    document.getElementsByClassName('bulgarian')[0].style.display = 'none'
+} else {
+    BG.style.fontWeight = '800'
+    BG.style.fontDecoration = 'underline'
+    document.getElementsByClassName('english')[0].style.display = 'none'
+    document.getElementsByClassName('bulgarian')[0].style.display = 'block'
+}
+
+
 let burgerOpen = false
 let burger = document.getElementsByClassName('burger')[0];
 burger.addEventListener('click', () => {
