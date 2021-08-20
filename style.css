@@ -186,7 +186,7 @@ box-sizing: border-box;
 .line-white {
     height: 6px;
     background: white;
-    transform: translateX(15%);
+    transform: translateX(20px);
     border: none;
 }
 
@@ -194,7 +194,7 @@ box-sizing: border-box;
     height: 6px;
     width: 7.6rem;
     background: #131313;
-    transform: translateX(-44%);
+    transform: translateX(-73px);
     border: none;
 
 }

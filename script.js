@@ -1,20 +1,3 @@
-// let burger = document.getElementsByClassName('burger')[0];
-// let close = document.getElementsByClassName('close')[0];
-
-// let home = document.getElementsByClassName('logo-white')[0];
-// let homePage = document.getElementsByClassName('container-landing')[0];
-// home.addEventListener('click',() => {
-// homePage.scrollIntoView({ 
-//   behavior: 'smooth' 
-// });
-// if (burger.style.display !== 'none') {
-//   homePage.scrollIntoView({ 
-//     behavior: 'smooth' 
-//   });
-
-// }
-// })
-
 setTimeout(() => {
     let overlay = document.getElementsByClassName('overlay')[0]
     overlay.style.opacity = '0'
@@ -29,31 +12,41 @@ setTimeout(() => {
 
 let BG = document.getElementsByClassName('bg-button')[0];
 let EN = document.getElementsByClassName('en-button')[0];
+let BG11 = document.getElementsByClassName('bg-button')[1];
+let EN11 = document.getElementsByClassName('en-button')[1];
 let language = 'en'
 
 BG.addEventListener('click', () => {
     language = 'bg'
     BG.style.fontWeight = '800'
-    BG.style.fontDecoration = 'underline'
+    BG11.style.fontWeight = '800'
+    EN.style.fontWeight = '400'
+    EN11.style.fontWeight = '400'
     document.getElementsByClassName('english')[0].style.display = 'none'
     document.getElementsByClassName('bulgarian')[0].style.display = 'block'
 })
 EN.addEventListener('click', () => {
     language = 'en'
     EN.style.fontWeight = '800'
-    EN.style.fontDecoration = 'underline'
+    EN11.style.fontWeight = '800'
+    BG.style.fontWeight = '400'
+    BG11.style.fontWeight = '400'
     document.getElementsByClassName('english')[0].style.display = 'block'
     document.getElementsByClassName('bulgarian')[0].style.display = 'none'
 })
 
 if (language === 'en') {
     EN.style.fontWeight = '800'
-    EN.style.fontDecoration = 'underline'
+    EN11.style.fontWeight = '800'
+    BG.style.fontWeight = '400'
+    BG11.style.fontWeight = '400'
     document.getElementsByClassName('english')[0].style.display = 'block'
     document.getElementsByClassName('bulgarian')[0].style.display = 'none'
 } else {
     BG.style.fontWeight = '800'
-    BG.style.fontDecoration = 'underline'
+    BG11.style.fontWeight = '800'
+    EN.style.fontWeight = '400'
+    EN11.style.fontWeight = '400'
     document.getElementsByClassName('english')[0].style.display = 'none'
     document.getElementsByClassName('bulgarian')[0].style.display = 'block'
 }
@@ -160,6 +153,8 @@ team_section.scrollIntoView({
 })
 
 let values_section = document.getElementsByClassName('values-section')[0];
+let values_section2 = document.getElementsByClassName('values-section2')[0];
+
 values_button.addEventListener('click',() => {
     top_nav.map(el => {
         if (el.classList.toString().includes('selected-nav-item')) {
@@ -174,10 +169,12 @@ values_button.addEventListener('click',() => {
     burger.style.background = 'url(./burger.svg) no-repeat'
 
         }
-// document.getElementsByClassName("container-menu-items2")[0].style.display = 'none'
 values_section.scrollIntoView({ 
   behavior: 'smooth' 
 });
+values_section2.scrollIntoView({ 
+    behavior: 'smooth' 
+  });
 })
 
 let services_section = document.getElementsByClassName('services-section')[0];
@@ -281,10 +278,12 @@ values_button2.addEventListener('click',() => {
     if (!values_button2.classList.toString().includes('selected-footer-nav-item')) {
         values_button2.classList.add('selected-footer-nav-item')
         }
-// document.getElementsByClassName("container-menu-items2")[0].style.display = 'none'
 values_section.scrollIntoView({ 
   behavior: 'smooth' 
 });
+values_section2.scrollIntoView({ 
+    behavior: 'smooth' 
+  });
 })
 
 services_button2.addEventListener('click',() => {
