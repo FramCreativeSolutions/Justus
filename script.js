@@ -103,7 +103,6 @@ home_button.addEventListener('click',() => {
     burger.style.background = 'url(./burger.svg) no-repeat'
 
         }
-// document.getElementsByClassName("container-menu-items2")[0].style.display = 'none'
 home_section.scrollIntoView({ 
   behavior: 'smooth' 
 });
@@ -213,7 +212,6 @@ location_button.addEventListener('click',() => {
     burger.style.background = 'url(./burger.svg) no-repeat'
 
         }
-    // document.getElementsByClassName("container-menu-items2")[0].style.display = 'none'
     location_section.scrollIntoView({ 
         behavior: 'smooth' 
     });
@@ -223,16 +221,7 @@ location_button.addEventListener('click',() => {
 
 
 home_button2.addEventListener('click',() => {
-    footer_nav.map(el => {
-        if (el.classList.toString().includes('selected-footer-nav-item')) {
-        el.classList.remove('selected-footer-nav-item')
-        }
-    })
-    if (!home_button2.classList.toString().includes('selected-footer-nav-item')) {
-        home_button2.classList.add('selected-footer-nav-item')
-        }
-        
-// document.getElementsByClassName("container-menu-items2")[0].style.display = 'none'
+   
 home_section.scrollIntoView({ 
   behavior: 'smooth' 
 });
@@ -240,44 +229,21 @@ home_section.scrollIntoView({
 
 
 history_button2.addEventListener('click',() => {
-    footer_nav.map(el => {
-        if (el.classList.toString().includes('selected-footer-nav-item')) {
-        el.classList.remove('selected-footer-nav-item')
-        }
-    })
-    if (!history_button2.classList.toString().includes('selected-footer-nav-item')) {
-        history_button2.classList.add('selected-footer-nav-item')
-        }
-// document.getElementsByClassName("container-menu-items2")[0].style.display = 'none'
+  
 history_section.scrollIntoView({ 
   behavior: 'smooth' 
 });
 })
 
 team_button2.addEventListener('click',() => {
-    footer_nav.map(el => {
-        if (el.classList.toString().includes('selected-footer-nav-item')) {
-        el.classList.remove('selected-footer-nav-item')
-        }
-    })
-    if (!team_button2.classList.toString().includes('selected-footer-nav-item')) {
-        team_button2.classList.add('selected-footer-nav-item')
-        }
-// document.getElementsByClassName("container-menu-items2")[0].style.display = 'none'
+  
 team_section.scrollIntoView({ 
   behavior: 'smooth' 
 });
 })
 
 values_button2.addEventListener('click',() => {
-    footer_nav.map(el => {
-        if (el.classList.toString().includes('selected-footer-nav-item')) {
-        el.classList.remove('selected-footer-nav-item')
-        }
-    })
-    if (!values_button2.classList.toString().includes('selected-footer-nav-item')) {
-        values_button2.classList.add('selected-footer-nav-item')
-        }
+    
 values_section.scrollIntoView({ 
   behavior: 'smooth' 
 });
@@ -287,30 +253,14 @@ values_section2.scrollIntoView({
 })
 
 services_button2.addEventListener('click',() => {
-    footer_nav.map(el => {
-        if (el.classList.toString().includes('selected-footer-nav-item')) {
-        el.classList.remove('selected-footer-nav-item')
-        }
-    })
-    if (!services_button2.classList.toString().includes('selected-footer-nav-item')) {
-        services_button2.classList.add('selected-footer-nav-item')
-        }
-    // document.getElementsByClassName("container-menu-items2")[0].style.display = 'none'
+   
     services_section.scrollIntoView({ 
         behavior: 'smooth' 
     });
 })
 
 location_button2.addEventListener('click',() => {
-    footer_nav.map(el => {
-        if (el.classList.toString().includes('selected-footer-nav-item')) {
-        el.classList.remove('selected-footer-nav-item')
-        }
-    })
-    if (!location_button2.classList.toString().includes('selected-footer-nav-item')) {
-        location_button2.classList.add('selected-footer-nav-item')
-        }
-    // document.getElementsByClassName("container-menu-items2")[0].style.display = 'none'
+   
     location_section.scrollIntoView({ 
         behavior: 'smooth' 
     });
@@ -500,7 +450,11 @@ let linked = document.getElementsByClassName('linked')[0].addEventListener('clic
     window.location = `https://www.linkedin.com/`
 })
 
-
+let navLogo = document.getElementsByClassName('nav-logo')[0].addEventListener('click', () => {
+    home_section.scrollIntoView({ 
+        behavior: 'smooth' 
+      });    
+})
 
 
 
@@ -585,3 +539,83 @@ const handleScrollAnimation = () => {
 window.addEventListener("scroll", () => { 
   handleScrollAnimation();
 });
+
+
+let home_loc = home_section.getBoundingClientRect().top + window.scrollY;
+let history_loc = history_section.getBoundingClientRect().top + window.scrollY;
+let team_loc = team_section.getBoundingClientRect().top + window.scrollY;
+let values_loc = values_section2.getBoundingClientRect().top + window.scrollY;
+let services_loc = services_section.getBoundingClientRect().top + window.scrollY;
+let location_loc = location_section.getBoundingClientRect().top + window.scrollY;
+
+let locs = [home_loc, history_loc, team_loc, values_loc, services_loc, location_loc]
+
+window.addEventListener("scroll", ()=> {
+    console.log(`${home_loc} + ${history_loc} + ${team_loc} + ${values_loc} + ${services_loc} + ${location_loc}`)
+
+    if (window.scrollY === 0) {
+
+        top_nav.map(el => {
+            if (el.classList.toString().includes('selected-nav-item')) {
+            el.classList.remove('selected-nav-item')}
+            })
+        home_button.classList.add('selected-nav-item')
+}
+
+        if (window.scrollY >= history_loc) {
+
+            top_nav.map(el => {
+                if (el.classList.toString().includes('selected-nav-item')) {
+                el.classList.remove('selected-nav-item')}
+                })
+            history_button.classList.add('selected-nav-item')
+    }
+
+    if (window.scrollY >= 1300) {
+
+        top_nav.map(el => {
+            if (el.classList.toString().includes('selected-nav-item')) {
+            el.classList.remove('selected-nav-item')}
+            })
+        team_button.classList.add('selected-nav-item')
+    }
+
+        if (window.scrollY >= services_loc) {
+
+            top_nav.map(el => {
+                if (el.classList.toString().includes('selected-nav-item')) {
+                el.classList.remove('selected-nav-item')}
+                })
+            services_button.classList.add('selected-nav-item')
+      
+}
+
+if (window.scrollY >= values_loc) {
+
+    top_nav.map(el => {
+        if (el.classList.toString().includes('selected-nav-item')) {
+        el.classList.remove('selected-nav-item')}
+        })
+    values_button.classList.add('selected-nav-item')
+}
+
+if (window.scrollY >= location_loc) {
+
+    top_nav.map(el => {
+        if (el.classList.toString().includes('selected-nav-item')) {
+        el.classList.remove('selected-nav-item')}
+        })
+    location_button.classList.add('selected-nav-item')
+}
+})
+
+let map_office_1 = document.getElementsByClassName('view-on-map-office1')[0];
+let map_office_2 = document.getElementsByClassName('view-on-map-office2')[0];
+
+map_office_1.addEventListener('click', () => {
+    window.location = `https://www.google.com/maps/place/ul.+%22General+Parensov%22+39,+1142+Sofia+Center,+Sofia/@42.6883823,23.3285158,17z/data=!3m1!4b1!4m5!3m4!1s0x40aa850adfc350cf:0x7c1076416463b7b1!8m2!3d42.6883823!4d23.3307045`
+})
+
+map_office_2.addEventListener('click', () => {
+    window.location = `https://www.google.com/maps/place/ul.+%22Professor+Georgi+Bradistilov%22+6,+1756+Studentski+Kompleks,+Sofia/@42.6570474,23.3579954,17z/data=!4m5!3m4!1s0x40aa842e584e0ddb:0x835363edba9a1f6c!8m2!3d42.657164!4d23.3580443`
+})

@@ -61,6 +61,7 @@ overflow-x: hidden;
     background-position: left;
     background-size: contain;
     margin-left: 9vw;
+    cursor: pointer;
 }
 
 .nav-items {
@@ -194,7 +195,7 @@ box-sizing: border-box;
     height: 6px;
     width: 7.6rem;
     background: #131313;
-    transform: translateX(-73px);
+    transform: translateX(-54px);
     border: none;
 
 }
@@ -1214,4 +1215,12 @@ margin-top: 5vh;
 
 .person-pic {
     opacity: 0;
+}
+
+.view-on-map-office2 {
+    cursor: pointer;
+}
+
+.view-on-map-office1 {
+    cursor: pointer;
 }
