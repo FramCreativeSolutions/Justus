@@ -541,17 +541,16 @@ window.addEventListener("scroll", () => {
 });
 
 
-let home_loc = home_section.getBoundingClientRect().top + window.scrollY;
-let history_loc = history_section.getBoundingClientRect().top + window.scrollY;
-let team_loc = team_section.getBoundingClientRect().top + window.scrollY;
-let values_loc = values_section2.getBoundingClientRect().top + window.scrollY;
-let services_loc = services_section.getBoundingClientRect().top + window.scrollY;
-let location_loc = location_section.getBoundingClientRect().top + window.scrollY;
+// let home_loc = home_section.getBoundingClientRect().top + window.scrollY;
+// let history_loc = history_section.getBoundingClientRect().top + window.scrollY;
+// let team_loc = team_section.getBoundingClientRect().top + window.scrollY;
+// let values_loc = values_section2.getBoundingClientRect().top + window.scrollY;
+// let services_loc = services_section.getBoundingClientRect().top + window.scrollY;
+// let location_loc = location_section.getBoundingClientRect().top + window.scrollY;
 
-let locs = [home_loc, history_loc, team_loc, values_loc, services_loc, location_loc]
+// let locs = [home_loc, history_loc, team_loc, values_loc, services_loc, location_loc]
 
 window.addEventListener("scroll", ()=> {
-    console.log(`${home_loc} + ${history_loc} + ${team_loc} + ${values_loc} + ${services_loc} + ${location_loc}`)
 
     if (window.scrollY === 0) {
 
@@ -562,7 +561,7 @@ window.addEventListener("scroll", ()=> {
         home_button.classList.add('selected-nav-item')
 }
 
-        if (window.scrollY >= history_loc) {
+        if (window.scrollY >= 650) {
 
             top_nav.map(el => {
                 if (el.classList.toString().includes('selected-nav-item')) {
@@ -580,7 +579,7 @@ window.addEventListener("scroll", ()=> {
         team_button.classList.add('selected-nav-item')
     }
 
-        if (window.scrollY >= services_loc) {
+        if (window.scrollY >= 4200) {
 
             top_nav.map(el => {
                 if (el.classList.toString().includes('selected-nav-item')) {
@@ -590,7 +589,7 @@ window.addEventListener("scroll", ()=> {
       
 }
 
-if (window.scrollY >= values_loc) {
+if (window.scrollY >= 5088) {
 
     top_nav.map(el => {
         if (el.classList.toString().includes('selected-nav-item')) {
@@ -599,7 +598,7 @@ if (window.scrollY >= values_loc) {
     values_button.classList.add('selected-nav-item')
 }
 
-if (window.scrollY >= location_loc) {
+if (window.scrollY >= 6450) {
 
     top_nav.map(el => {
         if (el.classList.toString().includes('selected-nav-item')) {
